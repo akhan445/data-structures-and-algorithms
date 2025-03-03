@@ -2,9 +2,9 @@
 
 When it comes to code, we have many ways to write it. Each person will bring their own set of knowledge and this field is highly opinionated so how do we know which code is good? We can summarize writing code into 2 things: **readability** and **scalability**. 
 
-Readability simply means that if another developer (or you after some time) looks at your code, they should be able to understand it. This means that it is logical, makes sense and follows the best practices. For python we use [PEP 8](https://peps.python.org/pep-0008/) style guide to help us write code that is consistent and so any python developer that comes across our code should be able to read it!
+**Readability** simply means that if another developer (or you after some time) looks at your code, they should be able to understand it. This means that it is logical, makes sense and follows the best practices. For python we use [PEP 8](https://peps.python.org/pep-0008/) style guide to help us write code that is consistent and so any python developer that comes across our code should be able to read it!
 
-Scalability is where it gets interesting. If I write a piece of code, it should be able to run efficiently regardless of whether the input is small or not. If the input size is only 100, we might not feel that but as our input size increases to 100,000 or 100,000,000 does that code still run efficiently? This is where Big O comes in. It helps us determine if the code we are writing is optimized or not. With scalability, our main concern becomes about **time** (speed) and **space** (memory). 
+**Scalability** is where it gets interesting. If I write a piece of code, it should be able to run efficiently regardless of whether the input is small or not. If the input size is only 100, we might not feel that but as our input size increases to 100,000 or 100,000,000 does that code still run efficiently? This is where Big O comes in. It helps us determine if the code we are writing is optimized or not. With scalability, our main concern becomes about **time** (speed) and **space** (memory). 
 
 Big O is how we analyze our code to determine the efficiency of the code we right. This really helps us become better programmers because it makes us think differently about the code we are writing.
 
@@ -22,3 +22,15 @@ Below is a graph that outlines that main Big O complexities and I've highlight w
 | O (n^2) | Quadratic | Nested for loop, go through all pairs |
 | O (2^n) | exponential |  |
 | O (n!) | factorial | Loop for every element |
+
+## Calculating Big O
+
+There are 3 scenarios we can look at when we analyze an algorithm, the best case, the average case and the worst case. If I use the best or average case as a measuring stick, it wouldn't really be an effective way since our algorithm could perform a lot worse in it's worse scenario but if our algorithm is effecitve in it's worst case, it will always perform better in the average and best case. So we are only concerned with the worse case since that is the lower bound. To calculate Big O we simply read the block of code line by line and assign values for each operation. The general rule of thumb is to use multiply for loops and addition otherwise.
+
+#### Rules for Big O
+1. Worst case only
+2. Remove constants
+3. Use different terms for different inputs
+4. Drop non-dominant terms
+
+#### Amortized Time
